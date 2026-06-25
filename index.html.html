@@ -1,0 +1,260 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.screen{background:#F7F6F3;border-radius:10px;border:0.5px solid var(--color-border-tertiary);overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.tb{background:#fff;border-bottom:0.5px solid #E4E2DC;padding:7px 12px;display:flex;align-items:center;gap:7px}
+.logo{font-size:11px;font-weight:700;color:#2A5C45}.logo span{font-weight:400;color:#6B6860}
+.hf{display:flex;gap:4px;margin-left:auto}
+.pb{font-size:9px;padding:3px 7px;border:0.5px solid #E4E2DC;border-radius:5px;background:#fff;color:#6B6860}
+.pb.g{background:#2A5C45;color:#fff;border-color:transparent}
+.pb.hi{outline:2px solid #f59e0b;outline-offset:1px}
+.mets{display:flex;gap:1px;background:#E4E2DC}
+.met{background:#fff;padding:6px 12px;flex:1}
+.ml{font-size:8px;color:#9E9B94;text-transform:uppercase;letter-spacing:.05em}
+.mv{font-size:14px;font-weight:700}
+.tags{padding:5px 12px;display:flex;gap:3px;background:#fff;border-bottom:0.5px solid #E4E2DC;flex-wrap:wrap}
+.tg{font-size:9px;padding:2px 7px;border-radius:10px;border:0.5px solid #E4E2DC;color:#6B6860}
+.tg.on{background:#2A5C45;color:#fff;border-color:transparent}
+.qrow{display:flex;height:15px;border-bottom:0.5px solid #E4E2DC}
+.qc{display:flex;align-items:center;padding-left:5px;font-size:8px;font-weight:700;color:#9E9B94;letter-spacing:.04em;border-right:1.5px solid #C8C5BC}
+.mrow{display:flex;height:16px;border-bottom:0.5px solid #E4E2DC}
+.mc{flex:1;display:flex;align-items:center;justify-content:center;font-size:8px;color:#9E9B94;border-right:0.5px solid #E4E2DC}
+.mc.now{font-weight:700;color:#1A1916;background:rgba(210,60,40,.05)}
+.mc.qe{border-right:1.5px solid #C8C5BC}
+.grow{display:flex;border-bottom:0.5px solid #E8E6E0;position:relative}
+.glabel{width:72px;flex-shrink:0;font-size:9px;padding:0 6px;display:flex;align-items:center;gap:4px;border-right:1.5px solid #C8C5BC;background:#FAFAF8;height:100%}
+.av{width:15px;height:15px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700;flex-shrink:0}
+.gtrack{flex:1;position:relative}
+.bar{position:absolute;height:8px;top:50%;transform:translateY(-50%);border-radius:3px;display:flex;align-items:center;padding:0 3px;font-size:7px;font-weight:600;overflow:hidden;white-space:nowrap}
+.bar.lo{top:30%}.bar.hi2{top:65%}
+.tl{position:absolute;top:0;bottom:0;width:1px;background:rgba(210,60,40,.5);z-index:3;pointer-events:none}
+.leg{display:flex;gap:10px;align-items:center;padding:5px 12px;border-top:0.5px solid #E4E2DC;background:#fff;font-size:9px;color:#6B6860;flex-wrap:wrap}
+.li{display:flex;align-items:center;gap:3px}
+.hl{outline:2px solid #f59e0b;outline-offset:1px}
+
+.slide{display:none;animation:fi .35s}
+.slide.active{display:block}
+@keyframes fi{from{opacity:0;transform:translateY(3px)}to{opacity:1;transform:translateY(0)}}
+.cap{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:9px;padding:12px 14px;margin-top:10px}
+.cap-t{font-size:13px;font-weight:500;color:var(--color-text-primary);margin-bottom:3px}
+.cap-b{font-size:12px;color:var(--color-text-secondary);line-height:1.6}
+.nav{display:flex;align-items:center;justify-content:space-between;margin-top:10px}
+.nb{font-size:11px;padding:5px 12px;border:0.5px solid var(--color-border-secondary);border-radius:6px;background:var(--color-background-primary);color:var(--color-text-primary);cursor:pointer}
+.nb:hover{background:var(--color-background-secondary)}
+.nb:disabled{opacity:.3;cursor:default}
+.nb.p{background:#2A5C45;color:#fff;border-color:transparent}
+.nb.p:hover{background:#1e4532}
+.dots{display:flex;gap:5px}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--color-border-secondary);transition:background .2s}
+.dot.on{background:#2A5C45}
+</style>
+
+<div style="max-width:640px;margin:0 auto;padding:.75rem 0">
+<div id="slides">
+
+<div class="slide active" id="s0">
+  <div class="screen">
+    <div class="tb"><div class="logo">Fanbased <span>/ Coach planning</span></div><div class="hf"><div class="pb">Alle kantoren</div><div class="pb">Alle statussen</div><div class="pb">2026</div><div class="pb">📋 Klanten</div><div class="pb">👥 Team</div><div class="pb g">+ Programma</div></div></div>
+    <div class="mets"><div class="met"><div class="ml">Actief nu</div><div class="mv" style="color:#1a6644">7</div></div><div class="met"><div class="ml">Aankomend</div><div class="mv" style="color:#3730a3">5</div></div><div class="met"><div class="ml">Afgerond</div><div class="mv" style="color:#6B6860">3</div></div><div class="met"><div class="ml">Coaches</div><div class="mv">11</div></div></div>
+    <div class="tags"><div class="tg on">Sylvia</div><div class="tg">Joep</div><div class="tg">Rogier</div><div class="tg">Michiel</div><div class="tg">Julia</div><div class="tg">Tim</div><div class="tg">Tim S</div><div class="tg">Jules</div></div>
+    <div class="qrow"><div style="width:72px;flex-shrink:0;border-right:1.5px solid #C8C5BC"></div><div class="qc" style="flex:3">Q1 2026</div><div class="qc" style="flex:3">Q2 2026</div><div class="qc" style="flex:3">Q3 2026</div><div class="qc" style="flex:2">Q4</div></div>
+    <div class="mrow"><div style="width:72px;flex-shrink:0;border-right:1.5px solid #C8C5BC"></div><div class="mc">Jan</div><div class="mc">Feb</div><div class="mc qe">Mrt</div><div class="mc">Apr</div><div class="mc">Mei</div><div class="mc now qe">Jun</div><div class="mc">Jul</div><div class="mc">Aug</div><div class="mc qe">Sep</div><div class="mc">Okt</div><div class="mc">Nov</div></div>
+    <div class="grow" style="height:26px;background:#FAFAF8"><div class="glabel"><div class="av" style="background:#EEEDFE;color:#3C3489">SY</div><span style="font-weight:700">Sylvia</span></div><div class="gtrack"><div class="bar" style="left:3%;width:24%;background:#BFDBFE;color:#1e40af">Van Doorne – Counsels</div><div class="bar" style="left:29%;width:25%;background:#BBF7D0;color:#14532d">Praktijkprogramma</div><div class="bar" style="left:82%;width:16%;background:#FED7AA;color:#7c2d12">SOAR</div><div class="tl" style="left:48%"></div></div></div>
+    <div class="grow" style="height:26px;background:#FAFAF8"><div class="glabel"><div class="av" style="background:#FAECE7;color:#712B13">JP</div><span style="font-weight:700">Joep</span></div><div class="gtrack"><div class="bar" style="left:3%;width:18%;background:#BBF7D0;color:#14532d">WMC – pilot</div><div class="bar" style="left:52%;width:22%;background:#FED7AA;color:#7c2d12">Van Doorne – Sanctierecht</div><div class="tl" style="left:48%"></div></div></div>
+    <div class="grow" style="height:26px;background:#FAFAF8"><div class="glabel"><div class="av" style="background:#EAF3DE;color:#27500A">RO</div><span style="font-weight:700">Rogier</span></div><div class="gtrack"><div class="bar" style="left:3%;width:28%;background:#BBF7D0;color:#14532d">BMI – groep 1</div><div class="bar" style="left:44%;width:20%;background:#FED7AA;color:#7c2d12">Mammoet</div><div class="tl" style="left:48%"></div></div></div>
+    <div class="grow" style="height:26px;background:#FAFAF8"><div class="glabel"><div class="av" style="background:#FAEEDA;color:#633806">MI</div><span style="font-weight:700">Michiel</span></div><div class="gtrack"><div class="bar" style="left:3%;width:28%;background:#BBF7D0;color:#14532d">Van Doorne – partners gr. 6</div><div class="bar" style="left:38%;width:25%;background:#FED7AA;color:#7c2d12">Van Doorne – partners gr. 7</div><div class="tl" style="left:48%"></div></div></div>
+    <div class="leg"><div class="li"><div style="width:12px;height:5px;border-radius:2px;background:#BFDBFE"></div>Afgerond</div><div class="li"><div style="width:12px;height:5px;border-radius:2px;background:#BBF7D0"></div>Actief</div><div class="li"><div style="width:12px;height:5px;border-radius:2px;background:#FED7AA"></div>Aankomend</div><div class="li"><div style="width:1px;height:11px;background:rgba(210,60,40,.5)"></div>Vandaag</div></div>
+  </div>
+  <div class="cap"><div class="cap-t">Welkom bij het Fanbased coach-planningdashboard</div><div class="cap-b">Dit is jullie centrale overzicht: wie doet wat, wanneer, en waar is nog ruimte. Geen Excel meer — alles live in één scherm. We lopen er samen in 8 stappen doorheen.</div></div>
+</div>
+
+<div class="slide" id="s1">
+  <div class="screen">
+    <div class="tb"><div class="logo">Fanbased <span>/ Coach planning</span></div><div class="hf"><div class="pb">Alle kantoren</div><div class="pb">Alle statussen</div><div class="pb">2026</div><div class="pb">📋 Klanten</div><div class="pb">👥 Team</div><div class="pb g">+ Programma</div></div></div>
+    <div class="mets" style="outline:2px solid #f59e0b;outline-offset:-1px"><div class="met"><div class="ml">Actief nu</div><div class="mv" style="color:#1a6644">7</div></div><div class="met"><div class="ml">Aankomend</div><div class="mv" style="color:#3730a3">5</div></div><div class="met"><div class="ml">Afgerond</div><div class="mv" style="color:#6B6860">3</div></div><div class="met"><div class="ml">Coaches</div><div class="mv">11</div></div></div>
+    <div class="tags"><div class="tg">Sylvia</div><div class="tg">Joep</div><div class="tg">Rogier</div><div class="tg">Michiel</div></div>
+    <div class="qrow"><div style="width:72px;flex-shrink:0;border-right:1.5px solid #C8C5BC"></div><div class="qc" style="flex:3">Q1 2026</div><div class="qc" style="flex:3">Q2 2026</div><div class="qc" style="flex:3">Q3 2026</div><div class="qc" style="flex:2">Q4</div></div>
+    <div class="mrow"><div style="width:72px;flex-shrink:0;border-right:1.5px solid #C8C5BC"></div><div class="mc">Jan</div><div class="mc">Feb</div><div class="mc qe">Mrt</div><div class="mc">Apr</div><div class="mc">Mei</div><div class="mc now qe">Jun</div><div class="mc">Jul</div><div class="mc">Aug</div><div class="mc qe">Sep</div><div class="mc">Okt</div><div class="mc">Nov</div></div>
+    <div class="grow" style="height:24px;background:#FAFAF8"><div class="glabel"><div class="av" style="background:#EEEDFE;color:#3C3489">SY</div><span style="font-weight:700">Sylvia</span></div><div class="gtrack"><div class="bar" style="left:3%;width:24%;background:#BFDBFE;color:#1e40af">Van Doorne – Counsels</div><div class="bar" style="left:29%;width:25%;background:#BBF7D0;color:#14532d">Praktijkprogramma</div><div class="tl" style="left:48%"></div></div></div>
+    <div class="grow" style="height:24px;background:#FAFAF8"><div class="glabel"><div class="av" style="background:#FAECE7;color:#712B13">JP</div><span style="font-weight:700">Joep</span></div><div class="gtrack"><div class="bar" style="left:3%;width:18%;background:#BBF7D0;color:#14532d">WMC – pilot</div><div class="tl" style="left:48%"></div></div></div>
+  </div>
+  <div class="cap"><div class="cap-t">Vier cijfers — het snelle beeld</div><div class="cap-b">Bovenin zie je direct hoeveel programma's er nu lopen, wat er nog start, hoeveel er afgerond zijn, en met hoeveel coaches je werkt. Deze getallen passen zich automatisch aan als je filtert op coach, kantoor of jaar.</div></div>
+</div>
+
+<div class="slide" id="s2">
+  <div class="screen">
+    <div class="tb"><div class="logo">Fanbased <span>/ Coach planning</span></div><div class="hf"><div class="pb">Alle kantoren</div><div class="pb">Alle statussen</div><div class="pb">2026</div><div class="pb">📋 Klanten</div><div class="pb">👥 Team</div><div class="pb g">+ Programma</div></div></div>
+    <div class="mets"><div class="met"><div class="ml">Actief nu</div><div class="mv" style="color:#1a6644">7</div></div><div class="met"><div class="ml">Aankomend</div><div class="mv" style="color:#3730a3">5</div></div><div class="met"><div class="ml">Afgerond</div><div class="mv" style="color:#6B6860">3</div></div><div class="met"><div class="ml">Coaches</div><div class="mv">11</div></div></div>
+    <div class="tags" style="outline:2px solid #f59e0b;outline-offset:-1px"><div class="tg on">Joep</div><div class="tg">Sylvia</div><div class="tg">Rogier</div><div class="tg">Michiel</div><div class="tg">Julia</div><div class="tg">Tim</div></div>
+    <div class="qrow"><div style="width:72px;flex-shrink:0;border-right:1.5px solid #C8C5BC"></div><div class="qc" style="flex:3">Q1 2026</div><div class="qc" style="flex:3">Q2 2026</div><div class="qc" style="flex:3">Q3 2026</div><div class="qc" style="flex:2">Q4</div></div>
+    <div class="mrow"><div style="width:72px;flex-shrink:0;border-right:1.5px solid #C8C5BC"></div><div class="mc">Jan</div><div class="mc">Feb</div><div class="mc qe">Mrt</div><div class="mc">Apr</div><div class="mc">Mei</div><div class="mc now qe">Jun</div><div class="mc">Jul</div><div class="mc">Aug</div><div class="mc qe">Sep</div><div class="mc">Okt</div><div class="mc">Nov</div></div>
+    <div class="grow" style="height:34px;background:#FAFAF8"><div class="glabel"><div class="av" style="background:#FAECE7;color:#712B13">JP</div><span style="font-weight:700">Joep</span></div><div class="gtrack"><div class="bar lo" style="left:3%;width:18%;background:#BBF7D0;color:#14532d">WMC – pilot</div><div class="bar lo" style="left:3%;top:58%;width:10%;background:#BBF7D0;color:#14532d">Numidia</div><div class="bar lo" style="left:52%;top:35%;width:22%;background:#FED7AA;color:#7c2d12">Van Doorne – Sanctierecht</div><div class="tl" style="left:48%"></div></div></div>
+  </div>
+  <div class="cap"><div class="cap-t">Filter op naam — zie de volle agenda</div><div class="cap-b">Klik op een naam in de balk om in te zoomen op één coach. Programma's die gelijktijdig lopen worden slim gestapeld op aparte regeltjes. Zo zie je direct wat iemand heeft, en wanneer er ruimte vrijkomt.</div></div>
+</div>
+
+<div class="slide" id="s3">
+  <div class="screen">
+    <div class="tb"><div class="logo">Fanbased <span>/ Coach planning</span></div><div class="hf"><div class="pb">Alle kantoren</div><div class="pb">Alle statussen</div><div class="pb">2026</div><div class="pb">📋 Klanten</div><div class="pb">👥 Team</div><div class="pb g">+ Programma</div></div></div>
+    <div class="mets"><div class="met"><div class="ml">Actief nu</div><div class="mv" style="color:#1a6644">7</div></div><div class="met"><div class="ml">Aankomend</div><div class="mv" style="color:#3730a3">5</div></div><div class="met"><div class="ml">Afgerond</div><div class="mv" style="color:#6B6860">3</div></div><div class="met"><div class="ml">Coaches</div><div class="mv">11</div></div></div>
+    <div class="tags"><div class="tg">Sylvia</div><div class="tg">Joep</div><div class="tg">Rogier</div><div class="tg">Michiel</div></div>
+    <div class="qrow"><div style="width:72px;flex-shrink:0;border-right:1.5px solid #C8C5BC"></div><div class="qc" style="flex:3">Q1 2026</div><div class="qc" style="flex:3">Q2 2026</div><div class="qc" style="flex:3">Q3 2026</div><div class="qc" style="flex:2">Q4</div></div>
+    <div class="mrow"><div style="width:72px;flex-shrink:0;border-right:1.5px solid #C8C5BC"></div><div class="mc">Jan</div><div class="mc">Feb</div><div class="mc qe">Mrt</div><div class="mc">Apr</div><div class="mc">Mei</div><div class="mc now qe">Jun</div><div class="mc">Jul</div><div class="mc">Aug</div><div class="mc qe">Sep</div><div class="mc">Okt</div><div class="mc">Nov</div></div>
+    <div class="grow" style="height:24px;background:#FAFAF8"><div class="glabel"><div class="av" style="background:#EAF3DE;color:#27500A">RO</div><span style="font-weight:700">Rogier</span></div><div class="gtrack"><div class="bar" style="left:3%;width:28%;background:#BBF7D0;color:#14532d">BMI – groep 1</div><div class="bar" style="left:44%;width:20%;background:#FED7AA;color:#7c2d12">Mammoet</div><div class="tl" style="left:48%"></div><div style="position:absolute;left:48%;top:0;bottom:0;width:30%;background:rgba(254,215,170,.2);border:1px dashed #f59e0b;pointer-events:none"></div></div></div>
+    <div class="grow" style="height:24px;background:#FAFAF8"><div class="glabel"><div class="av" style="background:#FAEEDA;color:#633806">MI</div><span style="font-weight:700">Michiel</span></div><div class="gtrack"><div class="bar" style="left:3%;width:28%;background:#BBF7D0;color:#14532d">Van Doorne – partners gr. 6</div><div class="bar" style="left:38%;width:25%;background:#FED7AA;color:#7c2d12">partners gr. 7</div><div class="tl" style="left:48%"></div></div></div>
+  </div>
+  <div class="cap"><div class="cap-t">Ruimte zien in één oogopslag</div><div class="cap-b">Lege ruimte in een rij = beschikbare capaciteit. Rogier heeft na de zomer nog niets staan — ideaal voor een nieuw traject. Zo kun je als team proactief plannen en klanten bedienen zonder coaches te overbelasten.</div></div>
+</div>
+
+<div class="slide" id="s4">
+  <div class="screen">
+    <div class="tb"><div class="logo">Fanbased <span>/ Coach planning</span></div><div class="hf"><div class="pb">Alle kantoren</div><div class="pb">Alle statussen</div><div class="pb">2026</div><div class="pb">📋 Klanten</div><div class="pb">👥 Team</div><div class="pb g hi">+ Programma</div></div></div>
+    <div style="margin:8px 12px;background:#fff;border:0.5px solid #E4E2DC;border-radius:8px;padding:10px">
+      <div style="font-size:10px;font-weight:700;color:#1A1916;margin-bottom:6px">Programma toevoegen</div>
+      <div style="font-size:9px;color:#6B6860;margin-bottom:4px">Coaches — selecteer één of meer</div>
+      <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:7px">
+        <div style="font-size:9px;padding:2px 7px;border-radius:10px;background:#2A5C45;color:#fff">Joep</div>
+        <div style="font-size:9px;padding:2px 7px;border-radius:10px;background:#1D9E75;color:#fff">Sylvia</div>
+        <div style="font-size:9px;padding:2px 7px;border-radius:10px;border:0.5px solid #E4E2DC;color:#6B6860">Rogier</div>
+        <div style="font-size:9px;padding:2px 7px;border-radius:10px;border:0.5px solid #E4E2DC;color:#6B6860">Tim</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:5px;font-size:9px">
+        <div><div style="color:#6B6860;margin-bottom:2px">Klant / programma</div><div style="border:0.5px solid #C8C5BC;border-radius:4px;padding:3px 6px">Van Doorne – MT 2026</div></div>
+        <div><div style="color:#6B6860;margin-bottom:2px">Kantoor</div><div style="border:0.5px solid #C8C5BC;border-radius:4px;padding:3px 6px">Amsterdam</div></div>
+        <div><div style="color:#6B6860;margin-bottom:2px">Startdatum</div><div style="border:0.5px solid #C8C5BC;border-radius:4px;padding:3px 6px">01-09-2026</div></div>
+        <div><div style="color:#6B6860;margin-bottom:2px">Einddatum</div><div style="border:0.5px solid #C8C5BC;border-radius:4px;padding:3px 6px">30-11-2026</div></div>
+      </div>
+      <div style="display:flex;justify-content:flex-end;gap:5px;margin-top:7px">
+        <div style="font-size:9px;padding:3px 8px;border:0.5px solid #E4E2DC;border-radius:4px;color:#6B6860">Annuleren</div>
+        <div style="font-size:9px;padding:3px 8px;background:#2A5C45;color:#fff;border-radius:4px">Toevoegen</div>
+      </div>
+    </div>
+  </div>
+  <div class="cap"><div class="cap-t">Programma toevoegen — meerdere coaches tegelijk</div><div class="cap-b">Klik op "+ Programma" rechtsboven. Vink alle betrokken coaches aan — ze kleuren op in hun eigen kleur. Vul klantnaam, kantoor en looptijd in en klik op "Toevoegen". Het programma verschijnt direct in de tijdlijn bij alle geselecteerde coaches.</div></div>
+</div>
+
+<div class="slide" id="s5">
+  <div class="screen">
+    <div class="tb"><div class="logo">Fanbased <span>/ Coach planning</span></div><div class="hf"><div class="pb">Alle kantoren</div><div class="pb">Alle statussen</div><div class="pb">2026</div><div class="pb">📋 Klanten</div><div class="pb">👥 Team</div><div class="pb g">+ Programma</div></div></div>
+    <div class="mets"><div class="met"><div class="ml">Actief nu</div><div class="mv" style="color:#1a6644">7</div></div><div class="met"><div class="ml">Aankomend</div><div class="mv" style="color:#3730a3">5</div></div><div class="met"><div class="ml">Afgerond</div><div class="mv" style="color:#6B6860">3</div></div><div class="met"><div class="ml">Coaches</div><div class="mv">11</div></div></div>
+    <div class="tags"><div class="tg">Sylvia</div><div class="tg">Joep</div><div class="tg">Rogier</div></div>
+    <div class="qrow"><div style="width:72px;flex-shrink:0;border-right:1.5px solid #C8C5BC"></div><div class="qc" style="flex:3">Q1 2026</div><div class="qc" style="flex:3">Q2 2026</div><div class="qc" style="flex:3">Q3 2026</div><div class="qc" style="flex:2">Q4</div></div>
+    <div class="mrow"><div style="width:72px;flex-shrink:0;border-right:1.5px solid #C8C5BC"></div><div class="mc">Jan</div><div class="mc">Feb</div><div class="mc qe">Mrt</div><div class="mc">Apr</div><div class="mc">Mei</div><div class="mc now qe">Jun</div><div class="mc">Jul</div><div class="mc">Aug</div><div class="mc qe">Sep</div><div class="mc">Okt</div><div class="mc">Nov</div></div>
+    <div class="grow" style="height:24px;background:#FAFAF8"><div class="glabel"><div class="av" style="background:#EEEDFE;color:#3C3489">SY</div><span style="font-weight:700">Sylvia</span></div><div class="gtrack"><div class="bar" style="left:29%;width:25%;background:#BBF7D0;color:#14532d;outline:2px solid #f59e0b;outline-offset:1px">Praktijkprogramma</div><div class="tl" style="left:48%"></div></div></div>
+    <div style="margin:6px 12px;background:#fff;border:0.5px solid #E4E2DC;border-radius:7px;padding:9px">
+      <div style="font-size:10px;font-weight:700;color:#1A1916;margin-bottom:1px">Praktijkprogramma</div>
+      <div style="font-size:9px;color:#6B6860;margin-bottom:6px">Sylvia · Apr – Sep 2026</div>
+      <div style="font-size:9px;color:#6B6860;margin-bottom:3px">Coaches</div>
+      <div style="display:flex;gap:3px;flex-wrap:wrap;margin-bottom:6px">
+        <div style="font-size:9px;padding:2px 7px;border-radius:10px;background:#7F77DD;color:#fff">Sylvia</div>
+        <div style="font-size:9px;padding:2px 7px;border-radius:10px;border:0.5px solid #E4E2DC;color:#6B6860">Joep</div>
+        <div style="font-size:9px;padding:2px 7px;border-radius:10px;border:0.5px solid #E4E2DC;color:#6B6860">Rogier</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;font-size:9px">
+        <div><div style="color:#6B6860;margin-bottom:2px">Klant</div><div style="border:0.5px solid #C8C5BC;border-radius:4px;padding:3px 6px">Praktijkprogramma</div></div>
+        <div><div style="color:#6B6860;margin-bottom:2px">Kantoor</div><div style="border:0.5px solid #C8C5BC;border-radius:4px;padding:3px 6px">Amsterdam</div></div>
+      </div>
+      <div style="display:flex;justify-content:flex-end;gap:4px;margin-top:6px">
+        <div style="font-size:9px;padding:2px 7px;border:0.5px solid #fca5a5;border-radius:4px;color:#b91c1c">Verwijderen</div>
+        <div style="font-size:9px;padding:2px 7px;border:0.5px solid #E4E2DC;border-radius:4px;color:#6B6860">Klanthistorie</div>
+        <div style="font-size:9px;padding:2px 7px;background:#2A5C45;color:#fff;border-radius:4px">Opslaan</div>
+      </div>
+    </div>
+  </div>
+  <div class="cap"><div class="cap-t">Bewerken — coaches toevoegen of aanpassen</div><div class="cap-b">Klik op een balk om hem direct te bewerken. Je ziet welke coaches er al op staan (aangevinkt in hun kleur) en kunt er eenvoudig coaches bij aanvinken of afvinken. Handig als bijv. Kearney bij zowel Julia als Tim moet staan. Opslaan past de tijdlijn meteen aan.</div></div>
+</div>
+
+<div class="slide" id="s6">
+  <div class="screen">
+    <div class="tb"><div class="logo">Fanbased <span>/ Coach planning</span></div><div class="hf"><div class="pb">Alle kantoren</div><div class="pb">Alle statussen</div><div class="pb">2026</div><div class="pb">📋 Klanten</div><div class="pb hi">👥 Team</div><div class="pb g">+ Programma</div></div></div>
+    <div style="margin:8px 12px;background:#fff;border:0.5px solid #E4E2DC;border-radius:8px;padding:10px">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">
+        <div style="font-size:10px;font-weight:700;color:#1A1916">Team beheren</div>
+        <div style="font-size:9px;color:#6B6860">×</div>
+      </div>
+      <div style="font-size:9px">
+        <div style="display:flex;align-items:center;gap:6px;padding:5px 0;border-bottom:0.5px solid #f0efe9"><div style="width:20px;height:20px;border-radius:50%;background:#EEEDFE;color:#3C3489;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700">SY</div><div style="flex:1"><div style="font-weight:600;color:#1A1916">Sylvia</div><div style="color:#6B6860">Amsterdam · 6 programma's</div></div><div style="padding:2px 7px;border:0.5px solid #fca5a5;border-radius:4px;color:#b91c1c">×</div></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:5px 0;border-bottom:0.5px solid #f0efe9"><div style="width:20px;height:20px;border-radius:50%;background:#FAECE7;color:#712B13;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700">JP</div><div style="flex:1"><div style="font-weight:600;color:#1A1916">Joep</div><div style="color:#6B6860">Amsterdam · 4 programma's</div></div><div style="padding:2px 7px;border:0.5px solid #fca5a5;border-radius:4px;color:#b91c1c">×</div></div>
+        <div style="display:flex;align-items:center;gap:6px;padding:5px 0"><div style="width:20px;height:20px;border-radius:50%;background:#E6F1FB;color:#0C447C;display:flex;align-items:center;justify-content:center;font-size:7px;font-weight:700">MA</div><div style="flex:1"><div style="font-weight:600;color:#1A1916">Maya <span style="background:#BBF7D0;color:#14532d;padding:1px 5px;border-radius:6px;font-size:8px">nieuw</span></div><div style="color:#6B6860">Eindhoven</div></div><div style="padding:2px 7px;border:0.5px solid #fca5a5;border-radius:4px;color:#b91c1c">×</div></div>
+      </div>
+      <div style="border-top:0.5px solid #E4E2DC;padding-top:7px;margin-top:4px">
+        <div style="font-size:9px;color:#6B6860;margin-bottom:4px">Collega toevoegen</div>
+        <div style="display:flex;gap:5px">
+          <div style="flex:1;border:0.5px solid #C8C5BC;border-radius:4px;padding:3px 6px;font-size:9px;color:#9E9B94">Naam</div>
+          <div style="flex:1;border:0.5px solid #C8C5BC;border-radius:4px;padding:3px 6px;font-size:9px;color:#6B6860">Amsterdam</div>
+          <div style="font-size:9px;padding:3px 8px;background:#2A5C45;color:#fff;border-radius:4px">Toevoegen</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cap"><div class="cap-t">Team beheren — collega's toevoegen of verwijderen</div><div class="cap-b">Via "👥 Team" rechtsboven zie je alle coaches met hun kantoor en aantal programma's. Voeg een nieuwe collega toe met naam en kantoor — die verschijnt direct als aanvinkoptie bij alle programma's. Verwijderen kan altijd, met een bevestigingscheck als iemand nog actieve programma's heeft.</div></div>
+</div>
+
+<div class="slide" id="s7">
+  <div class="screen">
+    <div class="tb"><div class="logo">Fanbased <span>/ Coach planning</span></div><div class="hf"><div class="pb hi">📋 Klanten</div><div class="pb">👥 Team</div><div class="pb g">+ Programma</div></div></div>
+    <div style="display:flex;overflow:hidden">
+      <div style="flex:1;padding:0 0 4px">
+        <div class="qrow"><div style="width:72px;flex-shrink:0;border-right:1.5px solid #C8C5BC"></div><div class="qc" style="flex:3">Q1 2026</div><div class="qc" style="flex:3">Q2 2026</div><div class="qc" style="flex:3">Q3 2026</div><div class="qc" style="flex:2">Q4</div></div>
+        <div class="mrow"><div style="width:72px;flex-shrink:0;border-right:1.5px solid #C8C5BC"></div><div class="mc">Jan</div><div class="mc">Feb</div><div class="mc qe">Mrt</div><div class="mc">Apr</div><div class="mc">Mei</div><div class="mc now qe">Jun</div><div class="mc">Jul</div><div class="mc">Aug</div><div class="mc qe">Sep</div><div class="mc">Okt</div><div class="mc">Nov</div></div>
+        <div class="grow" style="height:24px;background:#FAFAF8"><div class="glabel"><div class="av" style="background:#EEEDFE;color:#3C3489">SY</div><span style="font-weight:700">Sylvia</span></div><div class="gtrack"><div class="bar" style="left:3%;width:24%;background:#BFDBFE;color:#1e40af">Van Doorne – Counsels</div><div class="bar" style="left:29%;width:25%;background:#BBF7D0;color:#14532d;outline:2px solid #f59e0b;outline-offset:1px">Praktijkprogramma</div><div class="tl" style="left:48%"></div></div></div>
+        <div class="grow" style="height:24px;background:#FAFAF8"><div class="glabel"><div class="av" style="background:#FAECE7;color:#712B13">JP</div><span style="font-weight:700">Joep</span></div><div class="gtrack"><div class="bar" style="left:3%;width:18%;background:#BBF7D0;color:#14532d">WMC – pilot</div><div class="tl" style="left:48%"></div></div></div>
+      </div>
+      <div style="width:160px;flex-shrink:0;border-left:0.5px solid #E4E2DC;background:#fff;padding:8px;font-size:9px">
+        <div style="font-weight:700;color:#1A1916;margin-bottom:3px">Praktijkprogramma</div>
+        <div style="color:#6B6860;margin-bottom:2px">Sylvia · Apr – Sep 2026</div>
+        <div style="background:#BBF7D0;color:#14532d;display:inline-block;padding:1px 5px;border-radius:7px;margin-bottom:7px;font-size:8px">Actief</div>
+        <div style="font-weight:700;color:#6B6860;text-transform:uppercase;letter-spacing:.04em;font-size:8px;border-top:0.5px solid #E4E2DC;padding-top:5px;margin-bottom:4px">2024</div>
+        <div style="margin-bottom:3px;padding:4px;background:#F7F6F3;border-radius:4px"><div style="color:#1A1916">Praktijkprogramma</div><div style="color:#6B6860">Sylvia · Jan – Jun 2024</div></div>
+        <div style="font-weight:700;color:#6B6860;text-transform:uppercase;letter-spacing:.04em;font-size:8px;border-top:0.5px solid #E4E2DC;padding-top:5px;margin-bottom:4px">2026</div>
+        <div style="padding:4px;background:#F7F6F3;border-radius:4px"><div style="color:#1A1916">Praktijkprogramma</div><div style="color:#6B6860">Sylvia · Apr – Sep 2026</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="cap"><div class="cap-t">Klanthistorie — alles wat we bij een klant deden</div><div class="cap-b">Klik op een balk en klik dan "Klanthistorie", of open het paneel via "📋 Klanten" voor een overzicht van alle klanten. Per klant zie je elk programma dat Fanbased ooit heeft gefaciliteerd — met coach, jaar en looptijd. Handig bij BD-gesprekken of als een klant terugkomt.</div></div>
+</div>
+
+<div class="slide" id="s8">
+  <div class="screen" style="background:#fff;padding:14px 18px">
+    <div style="text-align:center;padding:10px 0 8px">
+      <div style="font-size:18px;font-weight:500;color:#2A5C45;margin-bottom:5px">Jullie dashboard, jullie planning</div>
+      <div style="font-size:11px;color:#6B6860;line-height:1.6;max-width:340px;margin:0 auto">Transparant, actueel en deelbaar met het hele team. Open het bestand, filter op jouw naam, en je ziet direct wat er speelt.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-top:12px">
+      <div style="background:#F7F6F3;border-radius:7px;padding:8px;text-align:center"><div style="font-size:15px;margin-bottom:3px">🎨</div><div style="font-size:10px;font-weight:500;color:#1A1916">Kleurcodering</div><div style="font-size:9px;color:#6B6860;margin-top:2px">Blauw · Groen · Oranje</div></div>
+      <div style="background:#F7F6F3;border-radius:7px;padding:8px;text-align:center"><div style="font-size:15px;margin-bottom:3px">👆</div><div style="font-size:10px;font-weight:500;color:#1A1916">Klik = bewerken</div><div style="font-size:9px;color:#6B6860;margin-top:2px">Coaches aan/afvinken</div></div>
+      <div style="background:#F7F6F3;border-radius:7px;padding:8px;text-align:center"><div style="font-size:15px;margin-bottom:3px">👥</div><div style="font-size:10px;font-weight:500;color:#1A1916">Team beheren</div><div style="font-size:9px;color:#6B6860;margin-top:2px">Toevoegen & verwijderen</div></div>
+      <div style="background:#F7F6F3;border-radius:7px;padding:8px;text-align:center"><div style="font-size:15px;margin-bottom:3px">➕</div><div style="font-size:10px;font-weight:500;color:#1A1916">Nieuw programma</div><div style="font-size:9px;color:#6B6860;margin-top:2px">Meerdere coaches tegelijk</div></div>
+      <div style="background:#F7F6F3;border-radius:7px;padding:8px;text-align:center"><div style="font-size:15px;margin-bottom:3px">📋</div><div style="font-size:10px;font-weight:500;color:#1A1916">Klanthistorie</div><div style="font-size:9px;color:#6B6860;margin-top:2px">Alle programma's per klant</div></div>
+      <div style="background:#F7F6F3;border-radius:7px;padding:8px;text-align:center"><div style="font-size:15px;margin-bottom:3px">🔍</div><div style="font-size:10px;font-weight:500;color:#1A1916">Filteren</div><div style="font-size:9px;color:#6B6860;margin-top:2px">Op naam, kantoor, jaar</div></div>
+    </div>
+  </div>
+  <div class="cap"><div class="cap-t">Dat is het — aan de slag!</div><div class="cap-b">Het dashboard staat in de gedeelde Drive-map. Vragen of feedback? Joep helpt je verder.</div></div>
+</div>
+
+</div>
+
+<div class="nav">
+  <button class="nb" id="prevBtn" onclick="go(-1)" disabled>← Vorige</button>
+  <div class="dots" id="dots"></div>
+  <button class="nb p" id="nextBtn" onclick="go(1)">Volgende →</button>
+</div>
+</div>
+
+<script>
+const N=9;let cur=0;
+const dots=document.getElementById('dots');
+for(let i=0;i<N;i++){const d=document.createElement('div');d.className='dot'+(i===0?' on':'');dots.appendChild(d);}
+function go(dir){
+  document.getElementById('s'+cur).classList.remove('active');
+  dots.children[cur].classList.remove('on');
+  cur=Math.max(0,Math.min(N-1,cur+dir));
+  document.getElementById('s'+cur).classList.add('active');
+  dots.children[cur].classList.add('on');
+  document.getElementById('prevBtn').disabled=cur===0;
+  const nb=document.getElementById('nextBtn');
+  if(cur===N-1){nb.textContent='Opnieuw ↺';nb.onclick=()=>go(-(N-1));}
+  else{nb.textContent='Volgende →';nb.onclick=()=>go(1);}
+}
+</script>
